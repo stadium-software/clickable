@@ -5,7 +5,7 @@ Sometimes we may want to allow users to click on container controls that contain
 https://github.com/stadium-software/clickable/assets/2085324/85257f7a-f0d5-4b68-9706-3ba7fc0190b8
 
 ## Description
-The script below allows you to make any container control clickable. When clicked, it passes the clicked control to a callback script. In that callback script you can use a Javascript action to interrogate the container and extract any other contro and content it contains 
+The script below allows you to make any container control clickable. When clicked, it passes the clicked control to a callback script. In that callback script you can use a Javascript action to interrogate the container and extract any control or content it contains 
 
 ## Version
 1.0 initial release
