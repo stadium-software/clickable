@@ -67,6 +67,9 @@ initClickable();
 ## Event Handler Setup
 1. Create a script under the page (call it anything you like e.g. "ClickEventHandler")
 2. Add an input parameter to the script and call it "Control"
+
+![](images/event-handler-input.png)
+
 3. Use a Javascript action to extract content from the input parameter
 4. Example:
 ```javascript
@@ -74,8 +77,12 @@ let el = ~.Parameters.Input.Control;
 return el.querySelector(".label-container").textContent;
 ```
 
+![](images/click-event-handler.png)
+
 ## Page.Load Setup
 1. Drag the Global Script called "Clickable" into the Page.Load event handler
 2. Provide values for the script parameters
    1. EventHandler: The name of the page-level script where you will handle the click event (e.g. "ClickEventHandler")
    2. RepeaterClass (only necessary when the clickable container control is inside a repeater control): Assign a unique classname to the repeater control and supply it as the parameter here
+
+![](images/script-parameters.png)
