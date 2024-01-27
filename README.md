@@ -1,11 +1,11 @@
-# Clickable Containers
+# Clickable
 
-Sometimes we may want to allow users to click on container controls that contain multiple other controls, but are not clickable out-of-the-box
+Sometimes we may want to allow users to click on container controls that contain multiple other controls, but are not clickable out-of-the-box. 
 
 ## Description
-The script below allows you to make any container control clickable. When clicked, it passes the clicked control to a callback script. Below is [an example](#page-setup) that show how to extract information from child elements of the clickable container. 
+The script below allows you to make any container control clickable. When clicked, it passes the clicked control to a callback script. Below is [an example](#page-setup) that show how to extract information from child elements of the clickable container. This method can be applied to any non-clickable control, like a Label, for example. 
 
-Use this method when you want to display collections of display controls (like Labels and Images) and want to make the entire container clickable. This method is not appropriate when the container control contains clickable elements, such as Links, Buttons, TextBoxes, DropDowns or other form elements. 
+Use this method when you want to display collections of display controls (like Labels and Images) and want to make the entire container clickable or when you want to make a non-clickable control clickable. Do not apply this method with container controls that contain clickable elements, such as Links, Buttons, TextBoxes, DropDowns or other form elements. 
 
 https://github.com/stadium-software/clickable/assets/2085324/85257f7a-f0d5-4b68-9706-3ba7fc0190b8
 
