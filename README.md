@@ -2,10 +2,12 @@
 
 Sometimes we may want to allow users to click on container controls that contain multiple other controls, but are not clickable out-of-the-box
 
-https://github.com/stadium-software/clickable/assets/2085324/85257f7a-f0d5-4b68-9706-3ba7fc0190b8
-
 ## Description
-The script below allows you to make any container control clickable. When clicked, it passes the clicked control to a callback script. In that callback script you can use a Javascript action to interrogate the container and extract any control or content it contains 
+The script below allows you to make any container control clickable. When clicked, it passes the clicked control to a callback script. Below are [some examples](#Page Setup) that show how to extract information from the child elements of the clickable container. 
+
+Please note that this method is not appropriate when the container control contains elements users are expected to interact with, such as TextBoxes, DropDowns or other form elements. Use this method when you want to display collections of display controls (such as Labels and Images) and want to make the entire container clickable. 
+
+https://github.com/stadium-software/clickable/assets/2085324/85257f7a-f0d5-4b68-9706-3ba7fc0190b8
 
 ## Version
 1.0 initial release
@@ -25,10 +27,8 @@ The script below allows you to make any container control clickable. When clicke
 ```javascript
 /* Stadium Script V1.0 */
 let scope = this;
+let parent = document.querySelector("#app > .container");
 let eventHandlerScript = ~.Parameters.Input.EventHandler;
-let parentClass = ~.Parameters.Input.RepeaterClass;
-let parent = document.body;
-if (parentClass) parent = document.querySelector("." + parentClass);
 let clicked = (e) => {
     observer.disconnect();
     if (e.target.classList.contains("stadium-clickable")) {
@@ -37,21 +37,20 @@ let clicked = (e) => {
         scope[eventHandlerScript](e.target.closest(".stadium-clickable"));
     }
     observer.observe(parent, options);
- };
+};
 let initClickable = () => {
-    if (parent) {
-        observer.disconnect();
-        let clickable = parent.querySelectorAll(".stadium-clickable");
-        for (let i = 0; i < clickable.length; i++) {
-            clickable[i].removeEventListener("click", clicked);
-            clickable[i].addEventListener("click", clicked, { once: true });
-            clickable[i].style.cursor = "pointer";
-        }
-        observer.observe(parent, options);
+    observer.disconnect();
+    let clickable = parent.querySelectorAll(".stadium-clickable");
+    for (let i = 0; i < clickable.length; i++) { 
+        clickable[i].removeEventListener("click", clicked);
+        clickable[i].addEventListener("click", clicked);
+        clickable[i].style.cursor = "pointer";
     }
+    observer.observe(parent, options);
  };
 let options = {
         childList: true,
+        subtree: true,
     },
     observer = new MutationObserver(initClickable);
 initClickable();
@@ -68,11 +67,15 @@ initClickable();
 
 ![](images/event-handler-input.png)
 
-3. Use a Javascript action to extract content from the input parameter
-4. Example:
+3. Add a class of your choosing to a control inside the clickable control (e.g. my-inside-control)
+
+![](images/control-class.png)
+
+4. Inside the Event Handler, use a Javascript action to extract content from the clicked control by interrogating the "Control" parameter
+5. An example of how to interrogate a label control being passed into the clickable control as a child
 ```javascript
 let el = ~.Parameters.Input.Control;
-return el.querySelector(".label-container").textContent;
+return el.querySelector(".my-inside-control").textContent;
 ```
 
 ![](images/click-event-handler.png)
