@@ -21,7 +21,6 @@ https://github.com/stadium-software/clickable/assets/2085324/85257f7a-f0d5-4b68-
 1. Create a Global Script called "Clickable"
 2. Add the following input parameters to the Global Script
    1. EventHandler
-   2. RepeaterClass
 3. Drag a JavaScript action into the script
 4. Add the Javascript below into the JavaScript code property
 ```javascript
@@ -83,8 +82,7 @@ Learn how to interrogate HTML elements: [Finding HTML Elements by CSS Selectors]
 
 ## Page.Load Setup
 1. Drag the Global Script called "Clickable" into the Page.Load event handler
-2. Provide values for the script parameters
+2. Provide a value for the script parameter
    1. EventHandler: The name of the page-level script where you will handle the click event (e.g. "ClickEventHandler")
-   2. RepeaterClass (only necessary when the clickable container control is inside a repeater control): Assign a unique classname to the repeater control and supply it as the parameter here
 
 ![](images/event-handler-parameters.png)
