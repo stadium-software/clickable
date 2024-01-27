@@ -79,7 +79,7 @@ return el.querySelector(".my-inside-control").textContent;
 
 Learn how to interrogate HTML elements: [Finding HTML Elements by CSS Selectors](https://www.w3schools.com/js/js_htmldom_elements.asp)
 
-![](images/event-handler-parameter.png)
+![](images/click-event-handler.png)
 
 ## Page.Load Setup
 1. Drag the Global Script called "Clickable" into the Page.Load event handler
@@ -87,4 +87,4 @@ Learn how to interrogate HTML elements: [Finding HTML Elements by CSS Selectors]
    1. EventHandler: The name of the page-level script where you will handle the click event (e.g. "ClickEventHandler")
    2. RepeaterClass (only necessary when the clickable container control is inside a repeater control): Assign a unique classname to the repeater control and supply it as the parameter here
 
-![](images/script-parameters.png)
+![](images/event-handler-parameters.png)
