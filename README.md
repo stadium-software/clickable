@@ -3,7 +3,7 @@
 Sometimes we may want to allow users to click on container controls that contain multiple other controls, but are not clickable out-of-the-box
 
 ## Description
-The script below allows you to make any container control clickable. When clicked, it passes the clicked control to a callback script. Below are [some examples](#Page Setup) that show how to extract information from the child elements of the clickable container. 
+The script below allows you to make any container control clickable. When clicked, it passes the clicked control to a callback script. Below are [some examples](#page-setup) that show how to extract information from the child elements of the clickable container. 
 
 Please note that this method is not appropriate when the container control contains elements users are expected to interact with, such as TextBoxes, DropDowns or other form elements. Use this method when you want to display collections of display controls (such as Labels and Images) and want to make the entire container clickable. 
 
