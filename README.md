@@ -85,4 +85,4 @@ Learn how to interrogate HTML elements: [Finding HTML Elements by CSS Selectors]
 2. Provide a value for the script parameter
    1. EventHandler: The name of the page-level script where you will handle the click event (e.g. "ClickEventHandler")
 
-![](images/event-handler-parameters.png)
+![](images/event-handler-parameter.png)
