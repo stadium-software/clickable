@@ -79,7 +79,7 @@ return el.querySelector(".my-inside-control").textContent;
 
 Learn how to interrogate HTML elements: [Finding HTML Elements by CSS Selectors](https://www.w3schools.com/js/js_htmldom_elements.asp)
 
-![](images/click-event-handler.png)
+![](images/event-handler-parameter.png)
 
 ## Page.Load Setup
 1. Drag the Global Script called "Clickable" into the Page.Load event handler
