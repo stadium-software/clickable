@@ -3,7 +3,7 @@
 Sometimes we may want to allow users to click on container controls that contain multiple other controls, but are not clickable out-of-the-box. 
 
 ## Description
-The script below allows you to make any control clickable. When clicked, it passes the clicked control to a callback script. This method can be applied to other non-clickable control, like a container or a Label, for example. Below is [an example](#page-setup) that shows how to extract information from child elements of the clickable container. 
+The script below allows you to make controls clickable. When clicked, it passes the clicked control to a callback script. This method can be applied to any non-clickable control, like a container or a Label, for example. Below is [an example](#page-setup) that shows how to extract information from child elements of the clickable container. 
 
 Use this method when you want to display collections of display controls (like Labels and Images) and want to make the entire container clickable or when you want to make a non-clickable control clickable. Do not apply this method with container controls that contain clickable elements, such as Links, Buttons, TextBoxes, DropDowns or other form elements. 
 
