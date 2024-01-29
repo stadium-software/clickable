@@ -5,7 +5,9 @@ Sometimes we may want to allow users to click on container controls that contain
 ## Description
 The script below allows you to make controls clickable. It passes a clicked controls to a callback script where the control can be interrogated. Below is [an example](#page-setup) that shows how to extract information from child elements of the clickable container. 
 
-This method can be applied to all non-clickable controls, like Containers, Panels or Labels, for example. This module is useful when you have collections of controls, like some Labels and Images inside a Container control for example, and you want to make the container clickable. Do not apply this method with container controls that contain elements that are themselves clickable, like TextBoxes, DropDowns or other form elements. 
+This method can be applied to all non-clickable controls, like Containers, Panels or Labels, for example. This module is useful when you have collections of controls, like some Labels and Images inside a Container control for example, and you want to make the container clickable. 
+
+Do not apply this method with container controls that contain elements that are themselves clickable, like TextBoxes, DropDowns, UploadFile, RadoiButtonList, DropDown or other form elements. 
 
 https://github.com/stadium-software/clickable/assets/2085324/85257f7a-f0d5-4b68-9706-3ba7fc0190b8
 
