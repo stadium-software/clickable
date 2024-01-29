@@ -75,11 +75,12 @@ initClickable();
 let el = ~.Parameters.Input.Control;
 return el.querySelector(".my-inside-control").textContent;
 ```
-5. Now use the return value from the Javascript action (e.g. show it in a Notification, navigate to another page and use it as a parameter, save it to the database, etc. )
 
 Learn how to interrogate HTML elements: [Finding HTML Elements by CSS Selectors](https://www.w3schools.com/js/js_htmldom_elements.asp)
 
 ![](images/click-event-handler.png)
+
+5. Now use the return value from the Javascript action (e.g. show it in a Notification, navigate to another page and use it as a parameter, save it to the database, etc. )
 
 ## Page.Load Setup
 1. Drag the Global Script called "Clickable" into the Page.Load event handler
