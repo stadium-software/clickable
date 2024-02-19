@@ -26,7 +26,7 @@ https://github.com/stadium-software/clickable/assets/2085324/85257f7a-f0d5-4b68-
 3. Drag a JavaScript action into the script
 4. Add the Javascript below into the JavaScript code property
 ```javascript
-/* Stadium Script V1.0 */
+/* Stadium Script V1.0 https://github.com/stadium-software/clickable */
 let scope = this;
 let parent = document.querySelector("#app > .container");
 let eventHandlerScript = ~.Parameters.Input.EventHandler;
